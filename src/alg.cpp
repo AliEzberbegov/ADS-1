@@ -1,11 +1,9 @@
 // Copyright 2021 NNTU-CS
 
 int cbinsearch(int *arr, int size, int value) {
-  //  поместить сюда реализацию алгоритма
   int left = 0; 
   int right = size - 1;
   int count = 0;
-  
   while (left <= right) {
     int central = left + (right - left) / 2;
     if (arr[central] > value) {
@@ -25,7 +23,7 @@ int cbinsearch(int *arr, int size, int value) {
      }
   }
   if (count > 0) 
-    return count;
-  else
-    return 0; // если ничего не найдено
-}
+   return count;
+    else
+   return 0; // если ничего не найдено
+  }
