@@ -4,6 +4,7 @@ int cbinsearch(int *arr, int size, int value) {
   int left = 0; 
   int right = size - 1;
   int count = 0;
+  
   while (left <= right) {
     int central = left + (right - left) / 2;
     if (arr[central] > value) {
@@ -21,10 +22,8 @@ int cbinsearch(int *arr, int size, int value) {
     count = count + 1;
     central = central - 1;
     }
+      return count;
+    }
   }
-}
-if (count > 0) 
-  return count;
-   else
   return 0; // если ничего не найдено
 }
